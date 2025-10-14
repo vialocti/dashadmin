@@ -1,0 +1,53 @@
+{
+    "tables": {
+      "fce_per.alumnos_info": {
+        "columns": {
+          "persona": "INTEGER",
+          "alumno": "INTEGER",
+          "legajo": "INTEGER",
+          "tipo_documento": "INTEGER",
+          "nro_documento": "VARCHAR(20)",
+          "apellido": "VARCHAR(30)",
+          "nombres": "VARCHAR(30)",
+          "fecha_nacimiento": "DATE",
+          "genero": "CHAR(1)",
+          "ubicacion": "INTEGER",
+          "propuesta": "INTEGER",
+          "plan": "INTEGER",
+          "anio_ingreso_pro": "INTEGER",
+          "anio_ingreso_fac": "INTEGER",
+          "promediosa": "NUMERIC(8,2)",
+          "promedioca": "NUMERIC(8,2)",
+          "aprobadas": "INTEGER",
+          "reprobadas": "INTEGER",
+          "libres": "INTEGER",
+          "aniounoap": "INTEGER",
+          "aniodosap": "INTEGER",
+          "aniotresap": "INTEGER",
+          "aniocuatroap": "INTEGER",
+          "aniocincoap": "INTEGER",
+          "aniocursada": "INTEGER",
+          "regularesap": "INTEGER",
+          "raniounoap": "INTEGER",
+          "raniodosap": "INTEGER",
+          "raniotresap": "INTEGER",
+          "raniocuatroap": "INTEGER",
+          "raniocincoap": "INTEGER",
+          "coef_tcarrera": "NUMERIC(8,2)",
+          "plan_version": "SMALLINT",
+          "completado": "INTEGER",
+          "perdidasreg": "INTEGER",
+          "ultimaperdireg": "INTEGER",
+          "calidad": "CHAR(1)",
+          "egresado": "CHAR(1)",
+          "id": "INTEGER PRIMARY KEY DEFAULT nextval('fce_per.alumnos_info_1_id_seq')",
+          "b_transcurridos": "INTEGER",
+          "apro_ideal_bimestre": "INTEGER",
+          "coef_vcarrera": "NUMERIC(8,2)",
+          "por_relativo": "INTEGER",
+          "aniocursada_b": "INTEGER"
+        }
+      }
+    }
+  }
+  
