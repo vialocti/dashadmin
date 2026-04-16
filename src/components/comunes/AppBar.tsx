@@ -48,9 +48,9 @@ const AppBar =() => {
               {dropdownAlumnosOpen && (
                 <div className="absolute mt-2 w-48 rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5">
                   <div className="py-1">
-                    <Link to="/inicialrei" className="block px-4 py-3 text-gray-800 text-base hover:bg-gray-200" onClick={closeAllMenus}>InicialRei</Link>
+                    <Link to="/inicial-reinscriptos" className="block px-4 py-3 text-gray-800 text-base hover:bg-gray-200" onClick={closeAllMenus}>Reinscriptos</Link>
                    
-                    <Link to="/calculotc" className="block px-4 py-3 text-gray-800 text-base hover:bg-gray-200" onClick={closeAllMenus}>CalculoTC</Link>
+                    <Link to="/set-datos-inscriptos" className="block px-4 py-3 text-gray-800 text-base hover:bg-gray-200" onClick={closeAllMenus}>Completar Datos</Link>
                   </div>
                 </div>
               )}
@@ -69,8 +69,9 @@ const AppBar =() => {
               {dropdownActividadesOpen && (
                 <div className="absolute mt-2 w-48 rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5">
                   <div className="py-1">
-                    <Link to="/actividadest" className="block px-4 py-3 text-gray-800 text-base hover:bg-gray-200" onClick={closeAllMenus}>ActividadesT</Link>
-                    <Link to="/indicest" className="block px-4 py-3 text-gray-800 text-base hover:bg-gray-200" onClick={closeAllMenus}>IndicesT</Link>
+                    <Link to="/indice-actividades" className="block px-4 py-3 text-gray-800 text-base hover:bg-gray-200" onClick={closeAllMenus}>Ind. Actividades</Link>
+                    <Link to="/indice-propuesta" className="block px-4 py-3 text-gray-800 text-base hover:bg-gray-200" onClick={closeAllMenus}>Ind. Propuesta</Link>
+                     <Link to="/aprobadas-ingresantes" className="block px-4 py-3 text-gray-800 text-base hover:bg-gray-200" onClick={closeAllMenus}>Aprob.Ingresantes</Link>
                   </div>
                 </div>
               )}
@@ -140,9 +141,9 @@ const AppBar =() => {
         {mobileMenuOpen && (
           <div className="sm:hidden">
             <div className="pt-2 pb-3 space-y-1">
-              <Link to="/inicialrei" className="block px-4 py-2 text-white hover:bg-blue-700" onClick={() => setMobileMenuOpen(false)}>InicialRei</Link>
+              <Link to="/inicial-reinscriptos" className="block px-4 py-2 text-white hover:bg-blue-700" onClick={() => setMobileMenuOpen(false)}>Reinscriptos</Link>
            
-              <Link to="/calculotc" className="block px-4 py-2 text-white hover:bg-blue-700" onClick={() => setMobileMenuOpen(false)}>CalculoTC</Link>
+              <Link to="/set-datos-inscriptos" className="block px-4 py-2 text-white hover:bg-blue-700" onClick={() => setMobileMenuOpen(false)}>Set Datos Reinscriptos</Link>
 
               <Link to="/actividadest" className="block px-4 py-2 text-white hover:bg-blue-700" onClick={() => setMobileMenuOpen(false)}>ActividadesT</Link>
               <Link to="/indicest" className="block px-4 py-2 text-white hover:bg-blue-700" onClick={() => setMobileMenuOpen(false)}>IndicesT</Link>

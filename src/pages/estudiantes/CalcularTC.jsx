@@ -51,7 +51,7 @@ const CalcularTC = () => {
         return;
       }
       
-      console.log('Aprobadas año completado:', resAprobadas.data);
+      //console.log('Aprobadas año completado:', resAprobadas.data);
      
       const tipo = '2'; // ajusta según tu caso
       const resCalculo = await procesoCalculoAnioCursada19(tipo,tipoO);

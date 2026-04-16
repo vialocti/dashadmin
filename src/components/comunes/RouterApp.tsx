@@ -19,6 +19,7 @@ import ActividadesIH from '../../pages/actividades/ActividadesIH';
 import IndicesTF from '../../pages/actividades/IndicesTF';
 import AlumnosInfo from '../../pages/consultas/AlumnosInfo';
 import ConsuOpenAI from '../../pages/consultas/ConsuOpenAI';
+import AprobadasPrimerAnio from '../../pages/actividades/AprobadasPrimerAnio';
 
 const RouterApp = () => {
   return (
@@ -28,11 +29,12 @@ const RouterApp = () => {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path='/login' element={<Login />} />
-          <Route path="/inicialrei" element={<InicialRei />} />
+          <Route path="/inicial-reinscriptos" element={<InicialRei />} />
        
-          <Route path="/calculotc" element={<CalcularTC />} />
-          <Route path="/actividadest" element={<ActividadesIH />} />
-          <Route path="/indicest" element={<IndicesTF />} />
+          <Route path="/set-datos-inscriptos" element={<CalcularTC />} />
+          <Route path="/indice-actividades" element={<ActividadesIH />} />
+          <Route path="/indice-propuesta" element={<IndicesTF />} />
+          <Route path="/aprobadas-ingresantes" element={<AprobadasPrimerAnio />} />
           <Route path='/infoalu' element={<AlumnosInfo/>} />
           <Route path='/consuopenai' element={<ConsuOpenAI/>} />
         </Routes>

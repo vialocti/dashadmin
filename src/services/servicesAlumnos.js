@@ -12,9 +12,9 @@ const api = axios.create({
 // Manejo de errores
 
 // Funciones de la API corregidas
-export const procesoInicialReinscriptos = async (anio)=> {
+export const procesoInicialReinscriptos = async (anio) => {
     if (!anio) return { error: 'Parámetro año inválido. Verifique la entrada.' };
-    
+
     try {
         const response = await api.get(`/procReinscriptos/${anio}`);
         return response.data;  // Retorna solo los datos de la API
@@ -24,11 +24,11 @@ export const procesoInicialReinscriptos = async (anio)=> {
     }
 };
 
-export const procesoIngresoInfoInicial = async (tp,etapa) => {
+export const procesoIngresoInfoInicial = async (tp, etapa) => {
     //console.log(tp)
     try {
         const response = await api.get(`/procinfoOne/${tp}/${etapa}`);
-        return response.data ;
+        return response.data;
     } catch (error) {
         console.log(error)
         return "error";
@@ -45,9 +45,9 @@ export const procesoAprobadasAnio = async (tipoO) => {
     }
 };
 
-export const procesoCalculoAnioCursada19 = async (tipo,tipoO)=> {
+export const procesoCalculoAnioCursada19 = async (tipo, tipoO) => {
     if (!tipo) return { error: 'Parámetro tipo inválido. Verifique la entrada.' };
-    
+
     try {
         const response = await api.get(`/calculoanioplan19/${tipo}/${tipoO}`);
         return response.data;
@@ -59,17 +59,17 @@ export const procesoCalculoAnioCursada19 = async (tipo,tipoO)=> {
 
 export const procesoCalculoAnioCursada98 = async (tipo, tipoO) => {
     if (!tipo) return { error: 'Parámetro tipo inválido. Verifique la entrada.' };
-    
+
     try {
         const response = await api.get(`/calculoanioplan98/${tipo}/${tipoO}`);
         return response.data;
     } catch (error) {
-console.log(error)
+        console.log(error)
         return "error";
     }
 };
 
-export const procesoCalculoCoeficienteT = async (anio, epoca, tipoO)=> {
+export const procesoCalculoCoeficienteT = async (anio, epoca, tipoO) => {
     if (!anio || !epoca) return { error: 'Parámetros inválidos. Verifique la entrada.' };
 
     try {
@@ -82,33 +82,33 @@ export const procesoCalculoCoeficienteT = async (anio, epoca, tipoO)=> {
 };
 
 
-export const traerDatosinformacionAlumnos = async ()=> {
-    
-    
+export const traerDatosinformacionAlumnos = async () => {
+
+
     try {
         const response = await api.get(`/traerdatosalu`);
-     
-        return  response.data.data ;
+
+        return response.data.data;
     } catch (error) {
-        console.log(error)    
+        console.log(error)
         return "error";
     }
 };
 
-export const procesarCompletudCarrera = async (tipoO)=> {
-    
+export const procesarCompletudCarrera = async (tipoO) => {
+
 
     try {
         const response = await api.get(`/calcularporcentaje/${tipoO}`);
         return response.data;
     } catch (error) {
-    console.log(error)        
+        console.log(error)
         return "error";
     }
 };
 
 export const procesarCalidadAlumno = async () => {
-    
+
 
     try {
         const response = await api.get(`/controlCalidad`);
@@ -120,7 +120,7 @@ export const procesarCalidadAlumno = async () => {
 };
 
 export const procesarMatriculaAlumno = async () => {
-    
+
 
     try {
         const response = await api.get(`/controlMatricula`);
@@ -130,26 +130,3 @@ export const procesarMatriculaAlumno = async () => {
         return "error";
     }
 };
-
-
-
-
-/**
-router.get('/traerReinscriptos/:anio', getReinscriptos ) dentro del primer proceso
-router.post('/grabarReinscripto', insertAlumnoInfo) dentro del primer proceso
-router.get('/procReinscriptos/:anio', processReinscriptos) ok
-
-router.get('/procinfoOne', processInfo_One) ok
-router.get('/aprobadasanio',calcularAproAnio) ok
-router.get('/calculoanioplan19/:tipo', aniocursada19)
-router.get('/calculoanioplan98/:tipo',aniocursada98)
-router.get('/calcularCoeft/:anio/:epoca',calculoVelocidad)
-
-router.get('/controlCalidad', controlCalidadAluinfo)
-router.get('/calcularporcentaje', controlPorcentaje)
-router.get('/controlMatricula', controlMatricula)
-
-
-
-
-*/

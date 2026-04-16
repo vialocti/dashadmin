@@ -1,4 +1,4 @@
-import { URI_UTL } from '../utils/constants';
+import { URI_UTL, URI_EXA, URI_ADMIN } from '../utils/constants';
 import axios from 'axios';
 
 // Configuración de Axios
@@ -6,7 +6,13 @@ const api = axios.create({
     baseURL: URI_UTL,
 });
 
+const apiexa = axios.create({
+    baseURL: URI_EXA,
+});
 
+const apiadmin = axios.create({
+    baseURL: URI_ADMIN,
+});
 // Manejo de errores
 
 
@@ -55,3 +61,30 @@ export const procesarIndicesActividad = async (anio, sede)=> {
   
     }
 };
+
+
+
+export const procesarAprobadasIngresanes = async (anio, sede, propuesta) => {
+    
+    if (!anio || !sede || !propuesta) return { error: 'Parámetro año inválido. Verifique la entrada.' };
+    const tipo='H'
+    try {
+        const response = await apiexa.get(`/mataprobaluanio/${anio}/${sede}/${propuesta}/${tipo}`);
+        return  response;  // Retorna solo los datos de la API
+    } catch (error) {
+        console.log(error)
+        return "error";
+    }
+}
+
+export const traerDatosAprobadasIngresantes = async () => { 
+    try {
+        const response = await apiadmin.get(`/aprobadas-primerH`);
+        return response.data;  // Retorna solo los datos de la API
+    } catch (error) {
+        console.log(error)
+        return "error";
+    }
+}
+
+

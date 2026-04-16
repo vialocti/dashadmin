@@ -1,5 +1,5 @@
-const HOST_PORT ='http://localhost:5000'
-//const HOST_PORT= 'http://200.12.136.75:5000'
+const HOST_PORT = 'http://localhost:5000'
+//const HOST_PORT = 'http://200.12.136.75:5000'
 //const HOST_PORTB= 'http://200.12.136.74:4000'
 //const HOST_PORTB= 'http://127.0.0.1:4000'
 //const HOST_PORT= 'http://172.22.160.97:5000'
@@ -13,5 +13,6 @@ export const URI_INS = `${HOST_PORT}/dbinscriptos`
 export const URI_REN = `${HOST_PORT}/rendimiento`
 export const URI_EXA = `${HOST_PORT}/examenes`
 export const URI_UTL = `${HOST_PORT}/utiles`
-export const URI_ALUI= `${HOST_PORT}/aluinfo`
-export const URI_AI= `${HOST_PORT}/datosanalisis`
+export const URI_ALUI = `${HOST_PORT}/aluinfo`
+export const URI_AI = `${HOST_PORT}/datosanalisis`
+export const URI_ADMIN = `${HOST_PORT}/admin`
