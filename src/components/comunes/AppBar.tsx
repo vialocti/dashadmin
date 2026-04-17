@@ -91,7 +91,9 @@ const AppBar =() => {
                 <div className="absolute mt-2 w-48 rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5">
                   <div className="py-1">
                     <Link to="/infoalu" className="block px-4 py-3 text-gray-800 text-base hover:bg-gray-200" onClick={closeAllMenus}>Alumnos</Link>
+                    <Link to="/consulta-indices" className="block px-4 py-3 text-gray-800 text-base hover:bg-gray-200" onClick={closeAllMenus}>Indices</Link>
                     <Link to="/consuopenai" className="block px-4 py-3 text-gray-800 text-base hover:bg-gray-200" onClick={closeAllMenus}>Consulta OpenAI</Link>
+                 
                   </div>
                 </div>
               )}
@@ -149,6 +151,9 @@ const AppBar =() => {
               <Link to="/indicest" className="block px-4 py-2 text-white hover:bg-blue-700" onClick={() => setMobileMenuOpen(false)}>IndicesT</Link>
 
               <Link to="/infoalu" className="block px-4 py-2 text-white hover:bg-blue-700" onClick={() => setMobileMenuOpen(false)}>Alumnos</Link>
+              <Link to="/consulta-indices" className="block px-4 py-2 text-white hover:bg-blue-700" onClick={() => setMobileMenuOpen(false)}>Indices</Link>
+              <Link to="/consulta-indices" className="block px-4 py-2 text-white hover:bg-blue-700" onClick={() => setMobileMenuOpen(false)}>Indices</Link>
+
               <Link to="/consuopenai" className="block px-4 py-2 text-white hover:bg-blue-700" onClick={() => setMobileMenuOpen(false)}>Consulta OpenAI</Link>
 
               {/* Botones Login / Logout en móvil */}

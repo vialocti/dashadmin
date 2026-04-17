@@ -10,7 +10,7 @@ const InicialRei=() => {
   const [loading, setLoading] = useState(false);
   const [message, setMessage] = useState("");
   const [tipoO, setTipoO]=useState('C')
-  const [etapa, setEtapa]= useState('A')
+  const [etapa, setEtapa]= useState('I')
 
   const handleProcess = async () => {
     setLoading(true);
@@ -89,11 +89,12 @@ const InicialRei=() => {
             </label>
             <select
               className="w-full p-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-500"
-              value={tipoO}
+              value={etapa}
               onChange={(e) => setEtapa(e.target.value)}
-            >
-              <option value="A">Actualizacion</option>
+            >    
               <option value="I">Inicial</option>
+              <option value="A">Actualizacion</option>
+          
             </select>
       </div>
 

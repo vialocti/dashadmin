@@ -20,6 +20,7 @@ import IndicesTF from '../../pages/actividades/IndicesTF';
 import AlumnosInfo from '../../pages/consultas/AlumnosInfo';
 import ConsuOpenAI from '../../pages/consultas/ConsuOpenAI';
 import AprobadasPrimerAnio from '../../pages/actividades/AprobadasPrimerAnio';
+import ConsultaIndices from '../../pages/consultas/ConsultaIndices';
 
 const RouterApp = () => {
   return (
@@ -37,6 +38,7 @@ const RouterApp = () => {
           <Route path="/aprobadas-ingresantes" element={<AprobadasPrimerAnio />} />
           <Route path='/infoalu' element={<AlumnosInfo/>} />
           <Route path='/consuopenai' element={<ConsuOpenAI/>} />
+          <Route path="/consulta-indices" element={<ConsultaIndices />} />
         </Routes>
       </div>
     </BrowserRouter>
